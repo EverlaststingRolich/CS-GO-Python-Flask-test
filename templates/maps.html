@@ -1,0 +1,41 @@
+<!--Файл для страницы выбора карты в случае клика на иконку в верхнем меню-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Карты</title>
+
+</head>
+<body>
+
+{% extends 'base.html' %}
+
+ {% block body %}
+<div class="container">
+
+    <div class="maps">
+
+    <h3>Доступные карты</h3>
+    <br>
+    <!--Изображение-ссылка Dust 2-->
+    <a class = "silochki_white" href="/dust2" >Dust 2</a><br>
+    <p><a href="/dust2"><img src="static/img/dust.jpg" width="240"
+    height="135" border="0" alt="Dust 2"></a></p>
+    <br>
+    <br>
+
+    <!--Изображение-ссылка Inferno-->
+    <a class = "silochki_white" href="/inferno">Inferno</a>
+    <p><a href="/dust2"><img src="static/img/inferno.jpg" width="240"
+    height="135" border="0" alt="Inferno"></a></p>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}
+
+</body>
+</html>

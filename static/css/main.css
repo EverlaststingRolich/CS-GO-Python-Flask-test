@@ -1,0 +1,114 @@
+/*отступ для шаблона base*/
+body {
+    padding: 30px;
+}
+
+/*Шаблон для страницы карты Inferno*/
+.inferno{
+    background: rgba(128, 138, 135, 0.9);
+    padding:20px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+
+
+}
+
+/*Шаблон для страницы карты Dust 2*/
+.dust2{
+    background: rgba(128, 138, 135, 0.9);
+    padding:20px;
+    height: 4100px;
+    width: 10;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+
+}
+
+.positions img {
+    margin-right: 15px; /* Отступ справа */
+    /*margin-bottom: 10px; /* Отступ снизу */
+
+}
+/*Шапка сайта(верхнее меню)*/
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+.topmenu {
+  backface-visibility: hidden;
+  background: rgba(255,255,255,.7);
+
+}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 30px;
+  font-weight: bold;
+  color: #003559;
+  text-transform: uppercase;
+}
+.down:after {
+  content: "\f107";
+  margin-left: 8px;
+  font-family: FontAwesome;
+}
+.topmenu li a:hover { color: #E6855F; }
+.submenu {
+  background: white;
+  border: 2px solid #003559;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  width: 150px;
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transition: .6s ease-in-out;
+}
+.topmenu > li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu li a {
+  color:black;
+  font-size: 16px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Kurale', serif;
+}
+
+
+/*Блок на странице выбора карт*/
+.maps{
+    padding:15px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10 10px #000;
+    background: rgba(128, 138, 135, 0.7);
+}
+
+/*класс для окрашевания ссылок в белый цвет*/
+.silochki_white{
+    color:white;
+}

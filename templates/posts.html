@@ -1,29 +1,36 @@
-{% extends 'base.html' %}
+<!--Файл для форума -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форум</title>
+</head>
+<body>
+    {% extends 'base.html' %}
 
-{% block title %}
-Страница про нас
+    {% block body %}
+    <div class="container">
 
-{% endblock %}
-
- {% block body %}
-<div class="container">
+   <h1>Все статьи</h1>
+   <a href="/create_post" >Создать</a><br>
 
 
-  <h1>Все статьи</h1>
-
-  {% if articles|length > 0  %}
+   {% if articles|length > 0  %}
     {% for el in articles %}
     <div class="alert alert-info">
-        <h2>{{ el.title }}</h2>>
-        <p>{{ el.intro }}</p>
-        <p><b>Дата: {{ el.date.date() }}</b>></p>
-        <a href="/posts/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+        <h2>{{ el.title }}</h2>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+        <a href = "/{{ el.id }}" class = "btn btn-warning">На страницу обсуждения</a>
     </div>
+
     {% endfor %}
 
     {% else %}
     <p>Тут пока что нет статей</p>
     {% endif %}
 
-</div>>
+
+</div>
 {% endblock %}
+</body>
+</html>
